@@ -20,6 +20,9 @@
 <script src="<?= base_url('assets/bower_components/jquery/dist/jquery.min.js') ?>"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?= base_url('assets/bower_components/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+<!-- DataTables -->
+<script src="<?= base_url('assets/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= base_url('assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') ?>"></script>
 <!-- SlimScroll -->
 <script src="<?= base_url('assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') ?>"></script>
 <!-- FastClick -->
@@ -31,7 +34,25 @@
 
 <script>
   $(document).ready(function () {
-    $('.sidebar-menu').tree()
+    $('.sidebar-menu').tree();
+    //$('#users-list').DataTable();
+
+    $('#users-list').DataTable({
+      processing: true,
+      serverSide: true,
+      ajax: {
+        url: '<?= base_url('api/utilisateur/findAll')?>',
+        type: 'GET',
+        dataSrc:"data"
+      },
+      columns: [
+          { data: 'id' },
+          { data: 'nom' },
+          { data: 'prenom' },
+          { data: 'login' },
+          { data: 'role' },
+      ]
+    });
   })
 </script>
 </body>
