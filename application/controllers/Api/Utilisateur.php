@@ -24,6 +24,14 @@ class Utilisateur extends CI_Controller{
         
         try{
             
+            if(empty($_POST['mot_de_passe']) || '********' === $_POST['mot_de_passe']){
+                unset($_POST['mot_de_passe']);
+            }
+
+            // @TODO
+            // Replace md with CI Encyption library ($this->encrypt->encode($_POST['mot_de_passe'])))
+            $_POST['mot_de_passe'] = md5($_POST['mot_de_passe']);
+            
             $this->utilisateur_model->save($_POST);
 
             echo json_encode([

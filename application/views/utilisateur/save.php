@@ -54,7 +54,7 @@
             <input type="hidden" name="id" value="" />
             <div class="col-sm-2"></div>
             <div class="col-sm-6">
-                <button type="button" id="save-user-button" class="btn btn-info btn-flat">Enregistrer</button>
+                <button type="button" id="save-user-button" class="btn btn-info btn-flat pull-right">Enregistrer</button>
             </div>
         </div>
         <!-- /.box-footer -->
