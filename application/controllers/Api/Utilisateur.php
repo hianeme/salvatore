@@ -19,4 +19,22 @@ class Utilisateur extends CI_Controller{
             'data' => $users
         ]);
     }
+
+    public function save(){
+        
+        try{
+            $this->utilisateur_model->save($_POST);
+
+            echo json_encode([
+                'status' => 'OK'
+            ]);
+            die;
+        }catch(\Throwable $th){
+
+            echo json_encode([
+                'status' => 'KO',
+                'log' => $th->getMessage()
+            ]);
+        }
+    }
 }

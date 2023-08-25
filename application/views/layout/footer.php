@@ -32,28 +32,10 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url('assets/dist/js/demo.js') ?>"></script>
 
-<script>
-  $(document).ready(function () {
-    $('.sidebar-menu').tree();
-    //$('#users-list').DataTable();
+<script type="module" src="<?= base_url('assets/app/app.js') ?>"></script>
 
-    $('#users-list').DataTable({
-      processing: true,
-      serverSide: true,
-      ajax: {
-        url: '<?= base_url('api/utilisateur/findAll')?>',
-        type: 'GET',
-        dataSrc:"data"
-      },
-      columns: [
-          { data: 'id' },
-          { data: 'nom' },
-          { data: 'prenom' },
-          { data: 'login' },
-          { data: 'role' },
-      ]
-    });
-  })
+<script>
+  var BASE_URL = '<?= base_url() ?>';
 </script>
 </body>
 </html>

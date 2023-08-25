@@ -13,4 +13,10 @@ class Utilisateur extends CI_Controller{
         $this->load->view('utilisateur/index');
         $this->load->view('layout/footer');
     }
+
+    public function add(){
+        $this->load->view('layout/header');
+        $this->load->view('utilisateur/add');
+        $this->load->view('layout/footer');
+    }
 }

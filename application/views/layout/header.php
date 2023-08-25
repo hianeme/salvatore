@@ -37,7 +37,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="<?= base_url() ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>P</b>S</span>
       <!-- logo for regular state and mobile devices -->
@@ -77,7 +77,7 @@
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
-            <a href="<?= base_url('authentification/logout') ?>" data-toggle="control-sidebar"><i class="fa fa-power-off"></i></a>
+            <a href="<?= base_url('authentification/logout') ?>"><i class="fa fa-power-off"></i></a>
           </li>
         </ul>
       </div>
