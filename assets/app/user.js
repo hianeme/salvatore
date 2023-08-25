@@ -60,7 +60,20 @@ var user = {
         });
     },
     initSaveForm: function(){
-        let id = utility.getPathFormUrl();
+
+        let path = utility.getPathFormUrl().split('/');
+
+        let id = -1;
+
+        if(path.length > 3 ){
+            
+            let controller = path[path.length-3];
+            let action = path[path.length-2];
+
+            if('utilisateur' === controller && 'save' === action && undefined != path[path.length-1]){
+                id = path[path.length-1];
+            }
+        }
 
         if(-1 !== id){
             $('[name="id"]').val(id);
