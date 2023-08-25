@@ -1,7 +1,7 @@
 import utility from './utility.js'
 
 var user = {
-    USER_API_URL: BASE_URL + '/api/utilisateur/',
+    USER_API_URL: BASE_URL + 'api/utilisateur/',
     init: function(){
         this.initDataTable();
         this.initSaveUserButton();
