@@ -23,6 +23,7 @@ class Utilisateur extends CI_Controller{
     public function save(){
         
         try{
+            
             $this->utilisateur_model->save($_POST);
 
             echo json_encode([
@@ -30,7 +31,32 @@ class Utilisateur extends CI_Controller{
             ]);
             die;
         }catch(\Throwable $th){
+            echo json_encode([
+                'status' => 'KO',
+                'log' => $th->getMessage()
+            ]);
+        }
+    }
 
+    public function find($id){
+        $user = $this->utilisateur_model->find($id);
+
+        echo json_encode([
+            'status' => 'OK',
+            'user' => $user
+        ]);
+    }
+
+    public function delete($id){
+        try{
+            
+            $this->utilisateur_model->delete($id);
+
+            echo json_encode([
+                'status' => 'OK'
+            ]);
+            die;
+        }catch(\Throwable $th){
             echo json_encode([
                 'status' => 'KO',
                 'log' => $th->getMessage()

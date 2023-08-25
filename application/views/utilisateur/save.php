@@ -13,7 +13,7 @@
       <h3 class="box-title">Ajouter un utilisateur</h3>
     </div>
     <!-- /.box-header -->
-    <form class="form-horizontal" name="save-user-form">
+    <form class="form-horizontal" name="save-user-form" autocomplete="off">
         <div class="box-body">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nom</label>
@@ -51,7 +51,11 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-            <button type="button" id="save-user-button" class="btn btn-info btn-flat pull-right">Ajouter</button>
+            <input type="hidden" name="id" value="" />
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <button type="button" id="save-user-button" class="btn btn-info btn-flat">Enregistrer</button>
+            </div>
         </div>
         <!-- /.box-footer -->
     </form>

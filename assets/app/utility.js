@@ -8,6 +8,12 @@ var utility = {
         });
 
         return serializedFormData;
+    },
+    getPathFormUrl: function(){
+        var url = new URL(document.location.href);
+        let path = url.pathname.split('/');
+        
+        return (5 === path.length) ? path[4] : -1;
     }
 }
 

@@ -11,6 +11,15 @@ class utilisateur_model extends CI_Model{
     public $mot_de_passe;
     public $role;
 
+    public function find($id){
+        return $this
+            ->db
+            ->select('id, nom, prenom, login, role')
+            ->where('id', $id)
+            ->get(self::TABLE_NAME)
+            ->row();
+    }
+
     public function find_user($data){
         return $this
             ->db
@@ -59,7 +68,23 @@ class utilisateur_model extends CI_Model{
     }
 
     public function save($user){
-        return $this->db->insert(self::TABLE_NAME, $user);
+        if(isset($user['id'])){
+            $id = $user['id'];
+            unset($user['id']);
+            
+            if(empty($user['mot_de_passe']) || '********' === $user['mot_de_passe']){
+                unset($user['mot_de_passe']);
+            }
+
+            return $this->db->update(self::TABLE_NAME, $user, ['id' => $id]);
+        }else{
+            return $this->db->insert(self::TABLE_NAME, $user);
+        }
+        
+    }
+
+    public function delete($id){
+        return $this->db->delete(self::TABLE_NAME, ['id' => $id]);
     }
 
 }

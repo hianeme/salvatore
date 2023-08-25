@@ -14,9 +14,9 @@ class Utilisateur extends CI_Controller{
         $this->load->view('layout/footer');
     }
 
-    public function add(){
+    public function save(){
         $this->load->view('layout/header');
-        $this->load->view('utilisateur/add');
+        $this->load->view('utilisateur/save');
         $this->load->view('layout/footer');
     }
 }
