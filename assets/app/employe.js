@@ -55,6 +55,9 @@ var employe = {
                 type: 'POST',
                 data: formData,
                 dataType: 'json',
+                beforeSend: function(xhr){
+                    $('.loader').show();
+                },
                 success: function(xhr){
                     if('OK' === xhr.status){
                         document.location.href = BASE_URL+'employe';
@@ -62,6 +65,9 @@ var employe = {
                 },
                 error: function(log){
                     console.log(log);
+                },
+                complete: function(){
+                    $('.loader').hide();
                 }
             })
         });
@@ -88,6 +94,9 @@ var employe = {
                 url: employe.EMPLOYE_API_URL + 'find/' + id,
                 type: 'POST',
                 dataType: 'json',
+                beforeSend: function(xhr){
+                    $('.loader').show();
+                },
                 success: function(xhr){
                     const _response = xhr;
                     if('OK' === _response.status){
@@ -100,6 +109,9 @@ var employe = {
                 },
                 error: function(log){
                     console.log(log);
+                },
+                complete: function(){
+                    $('.loader').hide();
                 }
             })
         }
@@ -121,6 +133,9 @@ var employe = {
                 url: employe.EMPLOYE_API_URL + 'delete/' + employeId,
                 type: 'POST',
                 dataType: 'json',
+                beforeSend: function(xhr){
+                    $('.loader').show();
+                },
                 success: function(xhr){
                     const _response = xhr;
                     
@@ -131,6 +146,9 @@ var employe = {
                 },
                 error: function(log){
                     console.log(log);
+                },
+                complete: function(){
+                    $('.loader').hide();
                 }
             });
         })

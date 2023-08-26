@@ -53,6 +53,9 @@ var user = {
                 type: 'POST',
                 data: formData,
                 dataType: 'json',
+                beforeSend: function(xhr){
+                    $('.loader').show();
+                },
                 success: function(xhr){
                     if('OK' === xhr.status){
                         document.location.href = BASE_URL+'utilisateur';
@@ -60,6 +63,9 @@ var user = {
                 },
                 error: function(log){
                     console.log(log);
+                },
+                complete: function(){
+                    $('.loader').hide();
                 }
             })
         });
@@ -86,6 +92,9 @@ var user = {
                 url: user.USER_API_URL + 'find/' + id,
                 type: 'POST',
                 dataType: 'json',
+                beforeSend: function(xhr){
+                    $('.loader').show();
+                },
                 success: function(xhr){
                     const _response = xhr;
                     if('OK' === _response.status){
@@ -101,6 +110,9 @@ var user = {
                 },
                 error: function(log){
                     console.log(log);
+                },
+                complete: function(){
+                    $('.loader').hide();
                 }
             })
         }
@@ -122,6 +134,9 @@ var user = {
                 url: user.USER_API_URL + 'delete/' + userId,
                 type: 'POST',
                 dataType: 'json',
+                beforeSend: function(xhr){
+                    $('.loader').show();
+                },
                 success: function(xhr){
                     const _response = xhr;
                     
@@ -132,6 +147,9 @@ var user = {
                 },
                 error: function(log){
                     console.log(log);
+                },
+                complete: function(){
+                    $('.loader').hide();
                 }
             });
         })

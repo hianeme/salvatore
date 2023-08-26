@@ -67,7 +67,7 @@ var utility = {
                             }
                             break;
                         case 'password':
-                            if(!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]$/.test(fieldValue)){
+                            if(!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(fieldValue)){
                                 this.marFieldError(fieldObject);
                                 errors.push('La chaine doit contenir : au moin un numéro, au moin un caractère spécial');
                             }
