@@ -1,22 +1,22 @@
 <?php 
 
-class Utilisateur extends CI_Controller{
+class Employe extends CI_Controller{
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('utilisateur_model');
+        $this->load->model('employe_model');
     }
 
     public function findAll(){
 
-        $users = $this->utilisateur_model->find_users($_GET);
-        $count_users = $this->utilisateur_model->count_users();
+        $employes = $this->employe_model->find_employes($_GET);
+        $employes_count = $this->employe_model->count_employes();
         
         echo json_encode([
-            'recordsTotal' => $count_users->count_users,
-            'recordsFiltered' => $count_users->count_users,
-            'data' => $users
+            'recordsTotal' => $employes_count->count_employes,
+            'recordsFiltered' => $employes_count->count_employes,
+            'data' => $employes
         ]);
     }
 
@@ -24,15 +24,7 @@ class Utilisateur extends CI_Controller{
         
         try{
             
-            if(empty($_POST['mot_de_passe']) || '********' === $_POST['mot_de_passe']){
-                unset($_POST['mot_de_passe']);
-            }else{
-                // @TODO
-                // Replace md with CI Encyption library ($this->encrypt->encode($_POST['mot_de_passe'])))
-                $_POST['mot_de_passe'] = md5($_POST['mot_de_passe']);
-            }
-            
-            $this->utilisateur_model->save($_POST);
+            $this->employe_model->save($_POST);
 
             echo json_encode([
                 'status' => 'OK'
@@ -47,18 +39,18 @@ class Utilisateur extends CI_Controller{
     }
 
     public function find($id){
-        $user = $this->utilisateur_model->find($id);
+        $employe = $this->employe_model->find($id);
 
         echo json_encode([
             'status' => 'OK',
-            'user' => $user
+            'employe' => $employe
         ]);
     }
 
     public function delete($id){
         try{
             
-            $this->utilisateur_model->delete($id);
+            $this->employe_model->delete($id);
 
             echo json_encode([
                 'status' => 'OK'

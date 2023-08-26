@@ -32,9 +32,15 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Connectez-vous pour démarrer votre session</p>
 
     <form action="<?= base_url('authentification/login') ?>" method="post">
+      <div class="callout callout-info">
+        <p>
+          <b>Login:</b> admin.<br/>
+          <b>Mot de passe:</b> Admin
+        </p>
+      </div>
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Login" name="login">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -44,11 +50,11 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
+        <div class="col-xs-7">
         </div>
         <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <div class="col-xs-5">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Se connecter</button>
         </div>
         <!-- /.col -->
       </div>
