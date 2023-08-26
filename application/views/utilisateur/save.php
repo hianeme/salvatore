@@ -18,25 +18,25 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-6">
-                    <input name="nom" type="text" class="form-control" placeholder="Nom">
+                    <input name="nom" type="text" class="form-control" placeholder="Nom" data-validation-type="alpha" data-validation-min="2" data-validation-mandatory="true" >
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Prénom</label>
                 <div class="col-sm-6">
-                    <input name="prenom" type="text" class="form-control" placeholder="Prénom">
+                    <input name="prenom" type="text" class="form-control" placeholder="Prénom" data-validation-type="alpha" data-validation-min="2" data-validation-mandatory="true">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Login</label>
                 <div class="col-sm-6">
-                    <input name="login" type="text" class="form-control" placeholder="Login">
+                    <input name="login" type="text" class="form-control" placeholder="Login" data-validation-type="alpha-num" data-validation-min="5" data-validation-mandatory="true">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Mot de passe</label>
                 <div class="col-sm-6">
-                    <input name="mot_de_passe" type="password" class="form-control" placeholder="Mot de passe">
+                    <input name="mot_de_passe" type="password" class="form-control" placeholder="Mot de passe" data-validation-min="6" data-validation-type="password" data-validation-mandatory="true">
                 </div>
             </div>
             <div class="form-group">

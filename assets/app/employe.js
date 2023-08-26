@@ -43,6 +43,11 @@ var employe = {
     },
     initSaveButton: function(){
         $('#save-employe-button').on('click', function(){
+
+            if(utility.validateFormByName('save-employe-form') > 0){
+                return;
+            }
+            
             let formData = utility.getFormDataByName('save-employe-form');
             
             $.ajax({

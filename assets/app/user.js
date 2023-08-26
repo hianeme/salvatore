@@ -41,6 +41,11 @@ var user = {
     },
     initSaveButton: function(){
         $('#save-user-button').on('click', function(){
+
+            if(utility.validateFormByName('save-user-form') > 0){
+                return;
+            }
+
             let formData = utility.getFormDataByName('save-user-form');
             
             $.ajax({
