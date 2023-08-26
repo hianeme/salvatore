@@ -37,8 +37,8 @@
     <form action="<?= base_url('authentification/login') ?>" method="post">
     <div class="callout callout-info">
         <p>
-          <b>Login:</b> admin.<br/>
-          <b>Mot de passe:</b> Admin
+          <b>ADMIN:</b> admin / Admin123456$$<br/>
+          <b>USERM:</b> pizza / Admin123456$$
         </p>
       </div>
       <?php if(!empty($error)){ ?>
