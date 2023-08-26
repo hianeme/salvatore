@@ -16,8 +16,8 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li><a href="<?= base_url('utilisateur')?> "><i class="fa fa-users"></i> <span>Utilisateurs</span></a></li>
-        <li><a href="#"><i class="fa fa-id-card"></i> <span>Employes</span></a></li>
+        <li><a href="<?= base_url('utilisateur') ?> "><i class="fa fa-users"></i> <span>Utilisateurs</span></a></li>
+        <li><a href="<?= base_url('employe') ?>"><i class="fa fa-id-card"></i> <span>Employes</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

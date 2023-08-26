@@ -1,15 +1,8 @@
 <?php 
 
-class utilisateur_model extends CI_Model{
+class Utilisateur_model extends CI_Model{
     
     const TABLE_NAME = 'utilisateur';
-
-    public $id;
-    public $nom;
-    public $prenom;
-    public $login;
-    public $mot_de_passe;
-    public $role;
 
     public function find($id){
         return $this
@@ -58,7 +51,7 @@ class utilisateur_model extends CI_Model{
         return $this->db->get()->result();
     }
 
-    public function count_users($parameters){
+    public function count_users(){
         return $this
             ->db
             ->select('count(id) as count_users')

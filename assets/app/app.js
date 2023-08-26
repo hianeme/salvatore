@@ -1,9 +1,10 @@
+import employe from "./employe.js";
 import user from "./user.js";
-import utility from './utility.js'
 
 var app = {
     init: function(){
         user.init();
+        employe.init();
     }
 }
 
