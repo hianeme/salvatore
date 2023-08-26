@@ -1,8 +1,8 @@
 <section class="content-header">
-  <h1>Module utilisateurs</h1>
+  <h1>Module employes</h1>
   <ol class="breadcrumb">
     <li><a href="#">Accueil</a></li>
-    <li class="active">Utilisateurs</li>
+    <li class="active">Employes</li>
   </ol>
 </section>
 
@@ -10,7 +10,7 @@
 <section class="content">
   <div class="box">
     <div class="box-header">
-      <h3 class="box-title">Ajouter un utilisateur</h3>
+      <h3 class="box-title">Ajouter un employe</h3>
     </div>
     <!-- /.box-header -->
     <form class="form-horizontal" name="save-employe-form" autocomplete="off">
@@ -18,31 +18,31 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-6">
-                    <input name="nom" type="text" class="form-control" placeholder="Nom">
+                    <input name="nom" type="text" class="form-control" placeholder="Nom" data-validation-type="alpha" data-validation-min="2" data-validation-mandatory="true">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Prénom</label>
                 <div class="col-sm-6">
-                    <input name="prenom" type="text" class="form-control" placeholder="Prénom">
+                    <input name="prenom" type="text" class="form-control" placeholder="Prénom" data-validation-type="alpha" data-validation-min="2" data-validation-mandatory="true">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Mail</label>
                 <div class="col-sm-6">
-                    <input name="mail" type="text" class="form-control" placeholder="Mail">
+                    <input name="mail" type="text" class="form-control" placeholder="Mail" data-validation-type="email" data-validation-min="2" data-validation-mandatory="true">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Adresse</label>
                 <div class="col-sm-6">
-                    <textarea name="adresse" class="form-control" placeholder="Adresse"></textarea>
+                    <textarea name="adresse" class="form-control" placeholder="Adresse" data-validation-min="6" data-validation-mandatory="true"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Telephone</label>
                 <div class="col-sm-6">
-                    <textarea name="telephone" class="form-control" placeholder="Telephone"></textarea>
+                    <textarea name="telephone" class="form-control" placeholder="Telephone" data-validation-min="6" data-validation-mandatory="true"></textarea>
                 </div>
             </div>
             <div class="form-group">
