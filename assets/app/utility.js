@@ -20,7 +20,9 @@ var utility = {
         let errorsCounter = 0;
         
         formData.forEach(function(element, index){
-            errorsCounter += utility.isFieldValid(element);
+            if(element.name !== 'mot_de_passe' || '********' !== element.value){
+                errorsCounter += utility.isFieldValid(element);
+            }
         });
 
         return errorsCounter;

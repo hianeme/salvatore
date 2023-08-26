@@ -10,13 +10,15 @@
         </div>
         <div class="pull-left info">
           <p><?= $logged_user->nom . ' ' . $logged_user->prenom ?></p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p><?= $logged_user->role ?></p>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">NAVIGATION</li>
+        <?php if('ADMIN' === $logged_user->role) { ?>
         <li><a href="<?= base_url('utilisateur') ?> "><i class="fa fa-users"></i> <span>Utilisateurs</span></a></li>
+        <?php } ?>
         <li><a href="<?= base_url('employe') ?>"><i class="fa fa-id-card"></i> <span>Employes</span></a></li>
       </ul>
     </section>

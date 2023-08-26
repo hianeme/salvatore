@@ -35,12 +35,18 @@
     <p class="login-box-msg">Connectez-vous pour démarrer votre session</p>
 
     <form action="<?= base_url('authentification/login') ?>" method="post">
-      <div class="callout callout-info">
+    <div class="callout callout-info">
         <p>
           <b>Login:</b> admin.<br/>
           <b>Mot de passe:</b> Admin
         </p>
       </div>
+      <?php if(!empty($error)){ ?>
+      <div class="callout callout-danger ">
+        <p><?= $error ?></p>
+      </div>
+      <?php } ?>
+      
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Login" name="login">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

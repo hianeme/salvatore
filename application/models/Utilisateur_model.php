@@ -16,6 +16,11 @@ class Utilisateur_model extends CI_Model{
     public function find_user($data){
         return $this
             ->db
+            ->select('id, nom, prenom, login, 
+                CASE 
+                    WHEN role = 1 THEN "ADMIN" 
+                    WHEN role = 2 THEN "USER" 
+                END as role', false)
             ->where('login', $data['login'])
             ->where('mot_de_passe', md5($data['mot_de_passe']))
             ->get(self::TABLE_NAME)

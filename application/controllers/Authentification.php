@@ -11,7 +11,8 @@ class Authentification extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('authentification/login');
+		$error = $this->session->flashdata('error');
+		$this->load->view('authentification/login', ['error' => $error]);
 	}
 
 	public function login(){
@@ -20,12 +21,15 @@ class Authentification extends CI_Controller {
 			$user = $this->utilisateur_model->find_user($_POST);
 
 			if(!$user){
+				$this->session->set_flashdata('error', 'Login / Mot de passe incorrect');
 				redirect('/authentification');	
 			}
 		
 			$this->session->set_userdata('user', $user);
 			
-			redirect('utilisateur');
+			$redirectRout = 'ADMIN' === $user->role ? 'utilisateur' : 'employe';  
+			
+			redirect($redirectRout);
 
 		}catch(Throwable $th){
 			echo $th->getMessage();die;
