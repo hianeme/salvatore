@@ -31,7 +31,16 @@ class Employe_model extends CI_Model{
             $this->db->or_like('mail', $parameters['search']['value']);
             $this->db->or_like('adresse', $parameters['search']['value']);
             $this->db->or_like('telephone', $parameters['search']['value']);
-            $this->db->or_like('poste', $parameters['search']['value']);
+
+            if(strpos('gérant', strtolower($parameters['search']['value'])) > -1){
+                $this->db->or_like('poste', 1);
+            }
+            if(strpos('livreur', strtolower($parameters['search']['value'])) > -1){
+                $this->db->or_like('poste', 2);
+            }
+            if(strpos('cuisinier', strtolower($parameters['search']['value'])) > -1){
+                $this->db->or_like('poste', 3);
+            }
         }
 
         $this->db->from(self::TABLE_NAME);

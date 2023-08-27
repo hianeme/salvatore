@@ -1,0 +1,220 @@
+[33mcommit 11e0bedb38dd2610d2b572bd0cce4328fe1bb20d[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 01:40:49 2023 +0100
+
+    [PS-14]
+    
+    Outils de qualité de code : PHP CS Fixer
+
+[33mcommit e0b2160feac5bb03321c72e008b34a4acc6bacf7[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 01:29:12 2023 +0100
+
+    [PS-14]
+    
+    Outils de qualité de code : PHP CS Fixer
+
+[33mcommit d703677d26862ffe6b01b88bb5bc2350588124c4[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 01:28:46 2023 +0100
+
+    [PS-14]
+    
+    Outils de qualité de code : PHP CS Fixer
+
+[33mcommit 16e818f218c1193f3ced52a047f550e372ff83e9[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 01:15:20 2023 +0100
+
+    [PS-13]
+    
+    Factoriser le code
+
+[33mcommit 3b0ef6bad12623c61afd9acf5d269e5c4c1aa1bb[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 01:14:04 2023 +0100
+
+    [PS-13]
+    
+    Factoriser le code
+
+[33mcommit 6917128fb2157a3d826378b36c617c8ffa7cdd5b[m[33m ([m[1;32mPS-14[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 00:48:27 2023 +0100
+
+    [PS-12]
+    
+    Gestion des permission
+
+[33mcommit 3d4ac6316a7286b202fd5ca47d5639ab27ca731a[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 00:45:44 2023 +0100
+
+    [PS-12]
+    
+    Gestion des permission
+
+[33mcommit f01dcc3b6e860065bdca2ae3d394a8e1a01c1e00[m
+Merge: c368eef 9d3ee43
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Sun Aug 27 00:10:13 2023 +0100
+
+    Merge pull request #8 from hianeme/PS-11
+    
+    [PS-11]
+
+[33mcommit 9d3ee433a0ec11ff7a239b68d13333c09bc9480c[m[33m ([m[1;31morigin/PS-11[m[33m, [m[1;32mPS-11[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sun Aug 27 00:09:37 2023 +0100
+
+    [PS-11]
+    
+    Loader ajax
+
+[33mcommit c368eefdfe13c478cf80cd341ffba2fd27cdf111[m
+Merge: 7c102d2 330d669
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Sat Aug 26 23:46:47 2023 +0100
+
+    Merge pull request #7 from hianeme/PS-8
+    
+    [PS-9]
+
+[33mcommit 330d669c5e22d17e75bd0d3369777dbc71a8921e[m[33m ([m[1;31morigin/PS-8[m[33m, [m[1;32mPS-8[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sat Aug 26 23:45:49 2023 +0100
+
+    [PS-9]
+    
+    alidation des champs
+
+[33mcommit 7c102d281ff3dc1fd1dd4b81b8cf9664de5f0b1c[m
+Merge: 44dd1e9 67dc96e
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Sat Aug 26 14:20:34 2023 +0100
+
+    Merge pull request #6 from hianeme/PS-8
+    
+    [PS-8]
+
+[33mcommit 67dc96e556809d109e001eb3c51b5f54dd97d43d[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Sat Aug 26 14:17:27 2023 +0100
+
+    [PS-8]
+    
+    Module employe
+
+[33mcommit 44dd1e99db7f2133d0e144c79e7bbaf581fa1892[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Fri Aug 25 12:53:30 2023 +0100
+
+    [PS-7]
+    
+    Modification de l'utilisateur
+
+[33mcommit b01454ea1ebfed5536a897ba26594470e67daf04[m
+Merge: 8e0b4c1 b2e934b
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Fri Aug 25 12:27:59 2023 +0100
+
+    Merge pull request #5 from hianeme/PS-7
+    
+    Ps 7
+
+[33mcommit b2e934b0efe27f5c6998f84b29dc7d6629072d7b[m[33m ([m[1;31morigin/PS-7[m[33m, [m[1;32mPS-7[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Fri Aug 25 12:27:19 2023 +0100
+
+    [PS-7]
+    
+    Rename Api to api
+
+[33mcommit 245acbfaaeb5c4c7be5dddba1473d6e3069103c2[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Fri Aug 25 12:25:40 2023 +0100
+
+    [PS-7]
+    
+    Crypter les mots de passe en md5
+
+[33mcommit 8e0b4c11ecdd1b567026c67fca233aff14aa4e38[m
+Merge: 87351d1 7695d3b
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Fri Aug 25 11:48:26 2023 +0100
+
+    Merge pull request #4 from hianeme/PS-6
+    
+    Ps 6
+
+[33mcommit 7695d3ba82c4ce811ea71604c700c5a6b2f65f1a[m[33m ([m[1;31morigin/PS-6[m[33m, [m[1;32mPS-6[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Fri Aug 25 10:58:49 2023 +0100
+
+    [PS-6]
+    
+    Suppression utilisateur
+
+[33mcommit 23c69d821869eba04f30b7c7bef2329e1603fe3f[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Fri Aug 25 01:34:37 2023 +0100
+
+    [PS-6]
+    
+    Ajouter un utilisateur
+
+[33mcommit fb4da74c4436a3fa9fffac3973f3dbd0f91dc35d[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Fri Aug 25 01:25:16 2023 +0100
+
+    [PS-6]
+    
+    Ajouter un utilisateur
+
+[33mcommit 6ecfaf5c28be6808ab1de60af07728d662b4d16b[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Thu Aug 24 04:36:34 2023 +0100
+
+    [PS-6]
+    
+    Liste des utilisateurs
+
+[33mcommit 87351d16c1cbed46b05a857fc2b40eb09f5bf7dc[m
+Merge: 915f43e fed6eeb
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Thu Aug 24 03:14:57 2023 +0100
+
+    Merge pull request #3 from hianeme/PS-5
+    
+    [PS-5]
+
+[33mcommit fed6eeb0b79d244d121c6352ac6f4505f3eb4d11[m[33m ([m[1;31morigin/PS-5[m[33m, [m[1;32mPS-5[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Thu Aug 24 03:12:46 2023 +0100
+
+    [PS-5]
+    
+    Module Authentification
+
+[33mcommit 915f43e59a864eb1200cbf5938e0ede659375ef1[m
+Merge: 5552dc2 98613d0
+Author: Soufiane HiANE <43405412+hianeme@users.noreply.github.com>
+Date:   Wed Aug 23 01:33:24 2023 +0100
+
+    Merge pull request #1 from hianeme/PS-4
+    
+    [PS-4]
+
+[33mcommit 98613d071d05096902a7b905c63570f161fab12a[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Wed Aug 23 01:31:09 2023 +0100
+
+    [PS-4]
+    
+    Intégration de AdminLTE
+
+[33mcommit 5552dc210db2f6be6a46318cd159d8b8ac14f369[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: HiANE Soufiane <soufiane.hiane-prestataire@laposte.fr>
+Date:   Tue Aug 22 14:11:25 2023 +0100
+
+    Initialisation du projet
