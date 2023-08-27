@@ -1,6 +1,9 @@
 <?php 
 
-class Employe extends CI_Controller{
+require APPPATH . 'libraries/REST_Controller.php';
+
+
+class Employe extends Rest_Controller{
 
     public function __construct()
     {
@@ -11,14 +14,21 @@ class Employe extends CI_Controller{
 
     public function findAll(){
 
-        $employes = $this->employe_model->find_employes($_GET);
-        $employes_count = $this->employe_model->count_employes();
-        
-        echo json_encode([
-            'recordsTotal' => $employes_count->count_employes,
-            'recordsFiltered' => $employes_count->count_employes,
-            'data' => $employes
-        ]);
+        try{
+            $employes = $this->employe_model->find_employes($_GET);
+            $employes_count = $this->employe_model->count_employes();
+            
+            $this->response([
+                'recordsTotal' => $employes_count->count_employes,
+                'recordsFiltered' => $employes_count->count_employes,
+                'data' => $employes
+            ], self::HTTP_OK);
+        }catch(\Throwable $th){
+            $this->response([
+                'status' => 'OK',
+                'log' => $th->getMessage()
+            ], self::HTTP_INTERNAL_ERROR);
+        }
     }
 
     public function save(){
@@ -27,25 +37,32 @@ class Employe extends CI_Controller{
             
             $this->employe_model->save($_POST);
 
-            echo json_encode([
+            $this->response([
                 'status' => 'OK'
-            ]);
-            die;
+            ], self::HTTP_OK);
+
         }catch(\Throwable $th){
-            echo json_encode([
-                'status' => 'KO',
+            $this->response([
+                'status' => 'OK',
                 'log' => $th->getMessage()
-            ]);
+            ], self::HTTP_INTERNAL_ERROR);
         }
     }
 
     public function find($id){
-        $employe = $this->employe_model->find($id);
+        try{
+            $employe = $this->employe_model->find($id);
 
-        echo json_encode([
-            'status' => 'OK',
-            'employe' => $employe
-        ]);
+            $this->response([
+                'status' => 'OK',
+                'employe' => $employe
+            ], self::HTTP_OK);
+        }catch(\Throwable $th){
+            $this->response([
+                'status' => 'OK',
+                'log' => $th->getMessage()
+            ], self::HTTP_INTERNAL_ERROR);
+        }
     }
 
     public function delete($id){
@@ -53,15 +70,14 @@ class Employe extends CI_Controller{
             
             $this->employe_model->delete($id);
 
-            echo json_encode([
+             $this->response([
                 'status' => 'OK'
-            ]);
-            die;
+            ], self::HTTP_OK);
         }catch(\Throwable $th){
-            echo json_encode([
-                'status' => 'KO',
+            $this->response([
+                'status' => 'OK',
                 'log' => $th->getMessage()
-            ]);
+            ], self::HTTP_INTERNAL_ERROR);
         }
     }
 }

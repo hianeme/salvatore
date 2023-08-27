@@ -1,6 +1,8 @@
 <?php 
 
-class Utilisateur extends CI_Controller{
+require APPPATH . 'libraries/REST_Controller.php';
+
+class Utilisateur extends Rest_Controller{
 
     public function __construct()
     {
@@ -11,14 +13,21 @@ class Utilisateur extends CI_Controller{
 
     public function findAll(){
 
-        $users = $this->utilisateur_model->find_users($_GET);
-        $count_users = $this->utilisateur_model->count_users();
-        
-        echo json_encode([
-            'recordsTotal' => $count_users->count_users,
-            'recordsFiltered' => $count_users->count_users,
-            'data' => $users
-        ]);
+        try{
+            $users = $this->utilisateur_model->find_users($_GET);
+            $count_users = $this->utilisateur_model->count_users();
+            
+            $this->response([
+                'recordsTotal' => $count_users->count_users,
+                'recordsFiltered' => $count_users->count_users,
+                'data' => $users
+            ], self::HTTP_OK);
+        }catch(\Throwable $th){
+            $this->response([
+                'status' => 'OK',
+                'log' => $th->getMessage()
+            ], self::HTTP_INTERNAL_ERROR);
+        } 
     }
 
     public function save(){
@@ -35,41 +44,46 @@ class Utilisateur extends CI_Controller{
             
             $this->utilisateur_model->save($_POST);
 
-            echo json_encode([
+            $this->response([
                 'status' => 'OK'
-            ]);
-            die;
+            ], self::HTTP_OK);
+
         }catch(\Throwable $th){
-            echo json_encode([
-                'status' => 'KO',
+            $this->response([
+                'status' => 'OK',
                 'log' => $th->getMessage()
-            ]);
+            ], self::HTTP_INTERNAL_ERROR);
         }
     }
 
     public function find($id){
-        $user = $this->utilisateur_model->find($id);
+        try{
+            $user = $this->utilisateur_model->find($id);
 
-        echo json_encode([
-            'status' => 'OK',
-            'user' => $user
-        ]);
+            $this->response([
+                'status' => 'OK',
+                'user' => $user
+            ], self::HTTP_OK);
+        }catch(\Throwable $th){
+            $this->response([
+                'status' => 'OK',
+                'log' => $th->getMessage()
+            ], self::HTTP_INTERNAL_ERROR);
+        }
     }
 
     public function delete($id){
         try{
-            
             $this->utilisateur_model->delete($id);
 
-            echo json_encode([
+            $this->response([
                 'status' => 'OK'
-            ]);
-            die;
+            ], self::HTTP_OK);
         }catch(\Throwable $th){
-            echo json_encode([
-                'status' => 'KO',
+            $this->response([
+                'status' => 'OK',
                 'log' => $th->getMessage()
-            ]);
+            ], self::HTTP_INTERNAL_ERROR);
         }
     }
 }
