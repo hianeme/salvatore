@@ -1,6 +1,6 @@
 <?php 
 
-require APPPATH . 'libraries/REST_Controller.php';
+require APPPATH . 'libraries/Rest_Controller.php';
 
 class Utilisateur extends Rest_Controller{
 
